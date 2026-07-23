@@ -1,0 +1,143 @@
+import type { Project } from '../types';
+
+export const projects: Project[] = [
+  {
+    slug: 'jalatro',
+    name: 'Jalatro',
+    shortDescription: 'Recreación del videojuego Balatro desarrollada en Java utilizando JavaFX, SceneBuilder y GLSL.',
+    fullDescription:
+      'Jalatro es una recreación del popular videojuego Balatro, desarrollada completamente en Java. El proyecto utiliza JavaFX como motor gráfico para la interfaz de usuario, SceneBuilder para el diseño visual de las escenas, y GLSL (OpenGL Shading Language) para efectos visuales avanzados. Este proyecto representa un logro significativo en el manejo de gráficos, optimización de recursos y arquitectura de software para videojuegos.',
+    date: 'Abril 2025',
+    status: 'Finalizado',
+    technologies: ['Java', 'JavaFX', 'SceneBuilder', 'GLSL'],
+    learnings: [
+      'CSS en JavaFX',
+      'Manejo eficiente de recursos',
+      'Prevención de Memory Leaks',
+    ],
+    problemSolved: 'Entretenimiento',
+    githubUrls: [],
+    gallery: [
+      { type: 'image', src: '/assets/projects/jalatro/jalatro-screenshot-1.png', alt: 'Jalatro - Pantalla principal' },
+      { type: 'image', src: '/assets/projects/jalatro/jalatro-screenshot-2.png', alt: 'Jalatro - Gameplay' },
+      { type: 'video', src: '/assets/projects/jalatro/jalatro-demo.mp4', alt: 'Jalatro - Video demo' },
+    ],
+    features: [
+      'Recreación fiel de la mecánica del juego original',
+      'Interfaz gráfica completa con JavaFX',
+      'Efectos visuales con shaders GLSL',
+      'Gestión eficiente de memoria y recursos',
+    ],
+    architecture: 'Arquitectura MVC con JavaFX, separando la lógica del juego, la interfaz de usuario y el control de eventos.',
+    coverImage: '/assets/projects/jalatro/jalatro-cover.png',
+  },
+  {
+    slug: 'kincaps',
+    name: 'KinCaps',
+    shortDescription: 'Tienda virtual de gorras con filtros, pagos seguros y diseño responsivo.',
+    fullDescription:
+      'KinCaps es una tienda virtual completa especializada en gorras, desarrollada como proyecto académico. La aplicación cuenta con un catálogo de productos con filtros avanzados, sistema de pagos seguros, carrito de compras y un diseño completamente responsivo. El backend está construido con Java Servlets y JSP, mientras que la base de datos utiliza MySQL para la persistencia de datos.',
+    date: 'Agosto 2025',
+    status: 'Finalizado',
+    technologies: ['Java', 'Servlet', 'JSP', 'MySQL', 'Bootstrap'],
+    learnings: [
+      'Servlet',
+      'Trabajo en equipo',
+    ],
+    problemSolved: 'Comercio electrónico para venta de gorras',
+    githubUrls: [
+      { label: 'Repositorio', url: 'https://github.com/ksolo-2022439/KinCaps' },
+    ],
+    gallery: [
+      { type: 'image', src: '/assets/projects/kincaps/kincaps-screenshot-1.png', alt: 'KinCaps - Página principal' },
+      { type: 'image', src: '/assets/projects/kincaps/kincaps-screenshot-2.png', alt: 'KinCaps - Catálogo de productos' },
+      { type: 'image', src: '/assets/projects/kincaps/kincaps-screenshot-3.png', alt: 'KinCaps - Detalle de producto' },
+    ],
+    features: [
+      'Catálogo de productos con filtros',
+      'Carrito de compras funcional',
+      'Sistema de pagos seguros',
+      'Diseño responsivo con Bootstrap',
+      'Gestión de inventario',
+    ],
+    architecture: 'Arquitectura MVC basada en Java Servlets para el controlador, JSP para las vistas y MySQL como capa de persistencia.',
+    coverImage: '/assets/projects/kincaps/kincaps-cover.png',
+  },
+  {
+    slug: 'kinscription',
+    name: 'KinScription',
+    shortDescription: 'Sistema integral para la gestión escolar desarrollado con Spring Boot.',
+    fullDescription:
+      'KinScription es un sistema de gestión escolar integral desarrollado con Spring Boot. Permite la administración completa de estudiantes, docentes, cursos, calificaciones y reportes académicos. La interfaz de usuario está construida con Thymeleaf para el renderizado del lado del servidor, y MySQL como sistema de gestión de base de datos.',
+    date: 'Octubre 2025',
+    status: 'Finalizado',
+    technologies: ['Spring Boot', 'Java', 'Thymeleaf', 'MySQL'],
+    learnings: [
+      'Spring Boot',
+      'Thymeleaf',
+      'Trabajo bajo presión',
+    ],
+    problemSolved: 'Gestión escolar',
+    githubUrls: [
+      { label: 'Repositorio', url: 'https://github.com/ksolo-2022439/KinScription' },
+    ],
+    gallery: [
+      { type: 'image', src: '/assets/projects/kinscription/kinscription-screenshot-1.png', alt: 'KinScription - Dashboard' },
+      { type: 'image', src: '/assets/projects/kinscription/kinscription-screenshot-2.png', alt: 'KinScription - Gestión de estudiantes' },
+      { type: 'image', src: '/assets/projects/kinscription/kinscription-screenshot-3.png', alt: 'KinScription - Reportes' },
+      { type: 'image', src: '/assets/projects/kinscription/kinscription-screenshot-4.png', alt: 'KinScription - Calificaciones' },
+    ],
+    features: [
+      'Gestión completa de estudiantes y docentes',
+      'Sistema de calificaciones',
+      'Generación de reportes académicos',
+      'Administración de cursos y horarios',
+      'Autenticación y autorización de usuarios',
+    ],
+    architecture: 'Arquitectura MVC con Spring Boot, utilizando Thymeleaf para vistas server-side y MySQL como base de datos relacional.',
+    coverImage: '/assets/projects/kinscription/kinscription-cover.png',
+  },
+  {
+    slug: 'bik',
+    name: 'BIK',
+    shortDescription: 'Banco Informático Kinal. Aplicación bancaria completa con clientes de usuario y administrador.',
+    fullDescription:
+      'BIK (Banco Informático Kinal) es una aplicación bancaria completa que simula las operaciones de un banco real. El sistema cuenta con clientes independientes para usuarios y administradores, así como servidores dedicados para cada tipo de cliente. La arquitectura distribuida permite una separación clara de responsabilidades y una escalabilidad óptima. El frontend está construido con React y Vite, mientras que el backend utiliza Spring Boot con MySQL.',
+    date: 'Junio 2026',
+    status: 'Finalizado',
+    technologies: ['React', 'Vite', 'JavaScript', 'Spring Boot', 'MySQL'],
+    learnings: [
+      'React',
+      'Arquitectura cliente-servidor',
+      'JavaScript moderno',
+    ],
+    problemSolved: 'Gestión bancaria',
+    githubUrls: [
+      { label: 'Repositorios (Organización)', url: 'https://github.com/orgs/IN6CM-BIK/repositories' },
+      { label: 'Client-User', url: 'https://github.com/IN6CM-BIK/Client-User' },
+      { label: 'Client-Admin', url: 'https://github.com/IN6CM-BIK/Client-Admin' },
+      { label: 'Server-User', url: 'https://github.com/IN6CM-BIK/Server-User' },
+      { label: 'Server-Admin', url: 'https://github.com/IN6CM-BIK/Server-Admin' },
+    ],
+    gallery: [
+      { type: 'image', src: '/assets/projects/bik/bik-screenshot-1.png', alt: 'BIK - Login' },
+      { type: 'image', src: '/assets/projects/bik/bik-screenshot-2.png', alt: 'BIK - Dashboard usuario' },
+      { type: 'image', src: '/assets/projects/bik/bik-screenshot-3.png', alt: 'BIK - Panel administrador' },
+      { type: 'image', src: '/assets/projects/bik/bik-screenshot-4.png', alt: 'BIK - Transferencias' },
+      { type: 'image', src: '/assets/projects/bik/bik-screenshot-5.png', alt: 'BIK - Historial' },
+      { type: 'video', src: '/assets/projects/bik/bik-demo-user.mp4', alt: 'BIK - Demo cliente usuario' },
+      { type: 'video', src: '/assets/projects/bik/bik-demo-admin.mp4', alt: 'BIK - Demo cliente administrador' },
+    ],
+    features: [
+      'Cliente independiente para usuarios',
+      'Cliente independiente para administradores',
+      'Servidor dedicado por tipo de cliente',
+      'Operaciones bancarias completas',
+      'Historial de transacciones',
+      'Panel de administración',
+      'Autenticación segura',
+    ],
+    architecture: 'Arquitectura cliente-servidor distribuida con dos clientes React (usuario y administrador) y dos servidores Spring Boot independientes, conectados a una base de datos MySQL centralizada.',
+    coverImage: '/assets/projects/bik/bik-cover.png',
+  },
+];
