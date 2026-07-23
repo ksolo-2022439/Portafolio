@@ -24,6 +24,7 @@ import AnimatedSection from '../components/ui/AnimatedSection';
 import Lightbox from '../components/ui/Lightbox';
 import VideoModal from '../components/ui/VideoModal';
 import { projects } from '../data/projects';
+import { getAssetUrl } from '../utils/helpers';
 
 export default function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -48,8 +49,13 @@ export default function ProjectPage() {
     );
   }
 
-  const images = project.gallery.filter((item) => item.type === 'image');
-  const videos = project.gallery.filter((item) => item.type === 'video');
+  const images = project.gallery
+    .filter((item) => item.type === 'image')
+    .map((item) => ({ ...item, src: getAssetUrl(item.src) }));
+
+  const videos = project.gallery
+    .filter((item) => item.type === 'video')
+    .map((item) => ({ ...item, src: getAssetUrl(item.src) }));
 
   const nextImage = useCallback(() => {
     if (images.length === 0) return;
@@ -117,7 +123,7 @@ export default function ProjectPage() {
               {/* Cover */}
               <div className="rounded-2xl overflow-hidden bg-gray-100 mb-8 shadow-sm border border-gray-100">
                 <img
-                  src={project.coverImage}
+                  src={getAssetUrl(project.coverImage)}
                   alt={project.name}
                   className="w-full h-64 md:h-80 object-cover"
                   loading="eager"

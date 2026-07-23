@@ -5,7 +5,7 @@ import type { Variants } from 'framer-motion';
 import Button from '../ui/Button';
 import CvModal from '../ui/CvModal';
 import { personalInfo } from '../../data/personal';
-import { scrollToSection } from '../../utils/helpers';
+import { scrollToSection, getAssetUrl } from '../../utils/helpers';
 
 export default function Hero() {
   const { fullName, role, heroDescription } = personalInfo;
@@ -82,7 +82,7 @@ export default function Hero() {
                 </Button>
                 <Button
                   variant="secondary"
-                  href="/Kenneth_Solorzano_CV.pdf"
+                  href={getAssetUrl('/Kenneth_Solorzano_CV.pdf')}
                   download="Kenneth_Solorzano_CV.pdf"
                   icon={<Download size={16} />}
                 >
@@ -108,7 +108,7 @@ export default function Hero() {
               <div className="relative">
                 <div className="w-72 h-80 md:w-80 md:h-[22rem] lg:w-96 lg:h-[26rem] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100">
                   <img
-                    src="/assets/images/hero-photo.jpg"
+                    src={getAssetUrl('/assets/images/hero-photo.jpg')}
                     alt={`Fotografía de ${fullName}`}
                     className="w-full h-full object-cover"
                     loading="eager"

@@ -5,6 +5,7 @@ import SectionHeading from '../ui/SectionHeading';
 import Card from '../ui/Card';
 import Badge from '../ui/Badge';
 import { projects } from '../../data/projects';
+import { getAssetUrl } from '../../utils/helpers';
 
 export default function Projects() {
   const navigate = useNavigate();
@@ -23,14 +24,13 @@ export default function Projects() {
           {projects.map((project, i) => (
             <AnimatedSection key={project.slug} delay={i * 0.1}>
               <Card
-                className="overflow-hidden cursor-pointer group"
-                padding="sm"
-                hover={true}
+                className="group cursor-pointer h-full flex flex-col justify-between"
+                onClick={() => navigate(`/proyecto/${project.slug}`)}
               >
                 {/* Cover Image */}
                 <div className="relative h-48 bg-gray-100 rounded-xl overflow-hidden mb-4">
                   <img
-                    src={project.coverImage}
+                    src={getAssetUrl(project.coverImage)}
                     alt={project.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"

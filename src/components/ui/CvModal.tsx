@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Download, ExternalLink, FileText } from 'lucide-react';
+import { getAssetUrl } from '../../utils/helpers';
 
 interface CvModalProps {
   isOpen: boolean;
@@ -26,7 +27,7 @@ export default function CvModal({ isOpen, onClose }: CvModalProps) {
 
   if (!isOpen) return null;
 
-  const pdfUrl = '/Kenneth_Solorzano_CV.pdf';
+  const pdfUrl = getAssetUrl('/Kenneth_Solorzano_CV.pdf');
 
   return (
     <AnimatePresence>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
@@ -9,11 +10,17 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const scrollY = useScrollPosition();
   const isScrolled = scrollY > 20;
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
     const id = href.replace('#', '');
-    scrollToSection(id);
+    if (location.pathname !== '/' && location.pathname !== '') {
+      navigate('/', { state: { scrollTo: id } });
+    } else {
+      scrollToSection(id);
+    }
   };
 
   return (
